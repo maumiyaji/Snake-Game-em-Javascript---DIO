@@ -18,7 +18,7 @@
   
 <b>Outros objetivos, para as próximas versões, são:</b>
 
-  • Um "score", com o número de maçãs comidas, e um "highscore"
-  • Obstáculos, como pedras e árvores
-  • Maçã, pedras, árvores e a cabeça da cobrinha, desenhados (sem o uso de img)
-  • Impedir que uma 'nova' maçã seja gerada sobre um bloco da cobrinha
+  • Um "score", com o número de maçãs comidas, e um "highscore"<br>
+  • Obstáculos, como pedras e árvores<br>
+  • Maçã, pedras, árvores e a cabeça da cobrinha, desenhados (sem o uso de img)<br>
+  • Impedir que uma 'nova' maçã seja gerada sobre um bloco da cobrinha<br>
