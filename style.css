@@ -1,0 +1,30 @@
+body{
+    height: 95vh;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    margin: auto;
+    border: 2px solid #000;
+    background-color: #5b5;
+}
+
+div[id="gameover"] {
+    position: absolute;
+    background-color: #000000;
+    opacity: 0.3;
+    margin-top: 30px;
+    width: 482px;
+    height: 482px;
+    display: none;
+}
+
+div[id="restartbutton"] {
+    position: absolute;
+    padding-top: 50px;
+    display: none;
+}
