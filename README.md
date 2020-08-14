@@ -21,5 +21,5 @@
   • Um "score", com o número de maçãs comidas, e um "highscore"<br>
   • Obstáculos, como pedras e árvores<br>
   • Maçã, pedras, árvores e a cabeça da cobrinha, desenhados (sem o uso de img)<br>
-    (implementado com o novo script)
+    (implementado com o novo script)<br>
   • Impedir que uma 'nova' maçã seja gerada sobre um bloco da cobrinha<br>
