@@ -10,7 +10,7 @@
   Ao invés de um aviso simples, agora a tela do canvas 'escurece' e apresenta um botão de "Restart".
   
   3. Cabeça da cobrinha:<br>
-  Agora a cabeça é pintada de azul. Na próxima versão, o objetivo é desenhar uma "cabeça de cobra".<br>
+  Agora a cabeça é pintada de azul. Na próxima versão, o objetivo é desenhar uma "cabeça de cobra". <b>(OK)</b><br>
   <i>(Os desenhos da cabeça, cauda e da maçã foram feitas com métodos HTML de desenho no canvas. É mais fácil usar imagens prontas ou SVG, mas queria testar os métodos)</i>
   
   4. Mudança na dificuldade:<br>
