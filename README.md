@@ -10,7 +10,8 @@
   Ao invés de um aviso simples, agora a tela do canvas 'escurece' e apresenta um botão de "Restart".
   
   3. Cabeça da cobrinha:<br>
-  Agora a cabeça é pintada de azul. Na próxima versão, o objetivo é desenhar uma "cabeça de cobra".
+  Agora a cabeça é pintada de azul. Na próxima versão, o objetivo é desenhar uma "cabeça de cobra". <b>(OK)</b><br>
+  <i>(Os desenhos da cabeça, cauda e da maçã foram feitas com métodos HTML de desenho no canvas. É mais fácil usar imagens prontas ou SVG, mas queria testar os métodos)</i>
   
   4. Mudança na dificuldade:<br>
   No script, pode-se escolher se a cobrinha, ao chegar na borda do canvas, reaparece do outro lado<br>
@@ -21,4 +22,5 @@
   • Um "score", com o número de maçãs comidas, e um "highscore"<br>
   • Obstáculos, como pedras e árvores<br>
   • Maçã, pedras, árvores e a cabeça da cobrinha, desenhados (sem o uso de img)<br>
+    (implementado com o novo script)<br>
   • Impedir que uma 'nova' maçã seja gerada sobre um bloco da cobrinha<br>
