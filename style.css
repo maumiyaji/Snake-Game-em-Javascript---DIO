@@ -28,3 +28,27 @@ div[id="restartbutton"] {
     padding-top: 50px;
     display: none;
 }
+
+.button {
+    padding-top: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 50px;
+  }
+
+.button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    box-shadow: 0 12px 12px 0 rgba(0,0,0,0.24);
+  }
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0);
+  }
