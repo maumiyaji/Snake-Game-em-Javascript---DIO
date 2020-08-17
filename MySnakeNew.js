@@ -33,7 +33,7 @@ let applePos = {
 // Cria um retângulo em cada coordenada do array
 // Na primeira (i=0), desenha a cabeça, na direção definida
 function drawSnake () {
-    context.fillStyle = "green";
+    context.fillStyle = "darkgreen";
     for(i = 0; i < snakePos.length; i++){
         if (i == 0) {
             let ptX = snakePos[0].x;
@@ -60,7 +60,7 @@ function drawSnake () {
                 context.fill();
                 context.arc(ptX+14,ptY+4,2,0,2*Math.PI);
                 context.fill();
-                context.fillStyle = "green";
+                context.fillStyle = "darkgreen";
             }
             if (direction == "down") {
                 context.moveTo(ptX,ptY);
@@ -83,7 +83,7 @@ function drawSnake () {
                 context.fill();
                 context.arc(ptX+14,ptY+12,2,0,2*Math.PI);
                 context.fill();
-                context.fillStyle = "green";
+                context.fillStyle = "darkgreen";
             }
             if (direction == "right") {
                 context.moveTo(ptX,ptY);
@@ -106,7 +106,7 @@ function drawSnake () {
                 context.fill();
                 context.arc(ptX+12,ptY+14,2,0,2*Math.PI);
                 context.fill();
-                context.fillStyle = "green";
+                context.fillStyle = "darkgreen";
             }
             if (direction == "left") {
                 context.moveTo(ptX+box,ptY);
@@ -129,7 +129,7 @@ function drawSnake () {
                 context.fill();
                 context.arc(ptX+4,ptY+14,2,0,2*Math.PI);
                 context.fill();
-                context.fillStyle = "green";
+                context.fillStyle = "darkgreen";
             }
         }
         else {
@@ -161,6 +161,7 @@ function drawSnake () {
                 }
             }
             else {
+                // Condições para as 'curvas'
                 let prevX = snakePos[i-1].x;    // Posição x do bloco anterior
                 let prevY = snakePos[i-1].y;    // Posição y do bloco anterior
                 let thisX = snakePos[i].x;      // Posição x do bloco atual
@@ -220,26 +221,31 @@ function drawSnake () {
     }
 }
 
+let grass = new Image();
+grass.src = "img/grass.jpg";
+
 // Função para 'limpar' o canvas
 // Se isso não for feito, os blocos da cobrinha
 // que já foram desenhados vão continuar aparecendo
 function drawBG () {
     context.clearRect(0, 0, 480, 480);
+    context.drawImage(grass, 0, 0);
 }
 
 // Função para criar a maçã
 function drawApple () {
     context.fillStyle = "red";
     context.beginPath();
-    context.arc(applePos.x+8,applePos.y+8,5,0,Math.PI);
-    context.arc(applePos.x+5,applePos.y+8,5,0,2*Math.PI);
-    context.arc(applePos.x+11,applePos.y+8,5,0,2*Math.PI);
+    context.arc(applePos.x+8,applePos.y+8,8,0,Math.PI);
+    context.arc(applePos.x+5,applePos.y+5,5,0,2*Math.PI);
+    context.arc(applePos.x+11,applePos.y+5,5,0,2*Math.PI);
+    context.fillRect(applePos.x,applePos.y+5,box,3);
     context.fill();
     context.fillStyle = "darkgreen"; // Folha
     context.beginPath();
-    context.arc(applePos.x+9,applePos.y+1,2,0,Math.PI);
-    context.fillRect(applePos.x+7,applePos.y+1,2,2);
-    context.fillRect(applePos.x+9,applePos.y-1,2,2);;
+    context.arc(applePos.x+9,applePos.y-2,2,0,Math.PI);
+    context.fillRect(applePos.x+7,applePos.y-2,2,2);
+    context.fillRect(applePos.x+9,applePos.y-4,2,2);;
     context.fill();
 }
 
@@ -334,6 +340,15 @@ function updateGame() {
     }else{
         applePos.x = Math.floor(Math.random() * 30) * box;
         applePos.y = Math.floor(Math.random() * 30) * box;
+        // Não deixa a maçã ser gerada 'sobre' a cobrinha 
+        for (i=0; i<snakePos.length; i++){
+            if (applePos.x == snakePos[i].x && applePos.y == snakePos[i].y) {
+                applePos.x = Math.floor(Math.random() * 30) * box;
+                applePos.y = Math.floor(Math.random() * 30) * box;
+                i = 0;
+            }
+        } 
+        
     }
 
     let newHead = {
